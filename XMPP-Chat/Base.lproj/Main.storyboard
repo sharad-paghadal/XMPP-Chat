@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XMPP_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Host Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krb-KX-zHQ">
+                                <rect key="frame" x="62" y="80" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A29-SZ-wNF"/>
+                                    <constraint firstAttribute="width" constant="250" id="y9i-DV-vbw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Jabber ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N4U-lS-4c0">
+                                <rect key="frame" x="62.5" y="160" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NDk-na-Emf"/>
+                                    <constraint firstAttribute="width" constant="250" id="iEh-eY-9yq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GpO-1x-5Bd">
+                                <rect key="frame" x="62" y="240" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="I12-vP-JVa"/>
+                                    <constraint firstAttribute="height" constant="30" id="KRx-zA-keA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN3-ac-Lda">
+                                <rect key="frame" x="168" y="320" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="buttonLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbX-Tk-BLi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GpO-1x-5Bd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AN5-05-q9D"/>
+                            <constraint firstItem="nN3-ac-Lda" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Blp-T4-khC"/>
+                            <constraint firstItem="krb-KX-zHQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VVf-gT-7xd"/>
+                            <constraint firstItem="GpO-1x-5Bd" firstAttribute="top" secondItem="N4U-lS-4c0" secondAttribute="bottom" constant="50" id="ZvZ-ed-DNH"/>
+                            <constraint firstItem="N4U-lS-4c0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bhg-YP-hU6"/>
+                            <constraint firstItem="krb-KX-zHQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="dNd-Jq-5P5"/>
+                            <constraint firstItem="N4U-lS-4c0" firstAttribute="top" secondItem="krb-KX-zHQ" secondAttribute="bottom" constant="50" id="gq8-v6-XZ8"/>
+                            <constraint firstItem="nN3-ac-Lda" firstAttribute="top" secondItem="GpO-1x-5Bd" secondAttribute="bottom" constant="50" id="ywj-tG-ufX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldHostAddress" destination="krb-KX-zHQ" id="a8m-pT-uQX"/>
+                        <outlet property="textFieldJabberID" destination="N4U-lS-4c0" id="qPZ-2F-qdR"/>
+                        <outlet property="textFieldPassword" destination="GpO-1x-5Bd" id="35f-RL-eIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
