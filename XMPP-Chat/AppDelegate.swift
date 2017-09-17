@@ -8,15 +8,18 @@
 
 import UIKit
 import CoreData
+import XMPPFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+//    var xmppController : XMPPController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        try! self.xmppController = XMPPController(hostName: "localhost", userJIDString: "admin@localhost", password: "admin")
+//        self.xmppController?.connect()
         return true
     }
 
